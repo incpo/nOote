@@ -27,8 +27,8 @@ Client host - netlify.app
 
 # Features
 
-- [x] Note has can be creted.
-- [x] Note hash can be created.
+- [x] Note can be created with unique link/hash.
+- [x] Note hash can be readed.
 - [x] Note is automatically deleted after reading.
 - [ ] Note contain files.
 
