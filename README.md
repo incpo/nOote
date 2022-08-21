@@ -16,8 +16,8 @@ Visit website -
 
 <b>App has two projects:</b> <br/>
 _backend - NODE JS. It`s not my own project!<br/>
-_frontend - REACT JS application.
-+ Im also used react bulma components in this app.
+_frontend - REACT JS application. <br/>
+Im also used react bulma components in this app.
 
 # Hosting
 
