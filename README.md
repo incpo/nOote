@@ -13,15 +13,15 @@ Try note app now.
 Visit website -
 [nOote](https://nooteapp.netlify.app/)
 
+<b>App has two project</b>
+backend - NODE JS. It`s not my own project!
+frontend - REACT JS application.
+
 # Hosting
 
 Server host - HEROKU <br/>
 Client host - netlify.app
 
-
-<b>App has two project</b>
-- backend - NODE JS. It`s not my own project!
-- frontend - REACT JS application.
 
 # Features
 
