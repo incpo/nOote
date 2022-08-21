@@ -28,4 +28,4 @@ Client host - netlify.app
 - [x] Note is automatically deleted after reading.
 
 
-I used react bulma components in the project.
+<!-- I used react bulma components in the project. -->
