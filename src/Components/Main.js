@@ -2,7 +2,6 @@ import { Container, Heading } from "react-bulma-components";
 import { Layout } from "./MultiUsing/Layout";
 
 export default function Main () {
-
     return(
         <Layout>
              <Container textAlign='center'>

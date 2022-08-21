@@ -31,7 +31,7 @@ export default function Header () {
                     </Navbar.Item>
                 </Navbar.Container>
                 <Navbar.Container align='end'>
-                    <Navbar.Item  href='https://github.com/FinLoik'>
+                    <Navbar.Item  href='https://github.com/FinLoik/nOote'>
                         <b>GitHub</b>
                     </Navbar.Item>
                 </Navbar.Container>

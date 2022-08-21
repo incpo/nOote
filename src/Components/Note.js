@@ -26,7 +26,6 @@ export default function Note () {
         window.location.href=env.url+'/'+hash
     }
 
-
     useEffect(()=> {
         if( url !== undefined ) {
             fetch(env.urlBackend, {
@@ -51,7 +50,6 @@ export default function Note () {
             })
         }
     }, [url])
-
 
 
     return(
@@ -84,32 +82,8 @@ export default function Note () {
                 </div>
             </form>
         </Layout>
-        
-
-
-
-
-        // <div>
-        //     <div className={result}>
-        //         {dataText}
-        //         <button onClick={()=> window.location.href=env.url}>Read another</button>
-        //     </div>
-        //     <div className={hashReader}>
-        //         <form onSubmit={readHash}>
-        //             <label htmlFor="url">Hash:</label>
-        //             <input type="text" name="url" id="url" />
-        //             <button type="submit">READ</button>
-        //         </form>
-        //     </div>
-        //     <div className={error}>
-        //         <h1>error</h1> 
-        //         <button onClick={()=>window.location.href=env.url}>Try again</button>
-        //     </div>
-        // </div>
     )
 }
-
-
 
 const styles = {
     textArea: {
