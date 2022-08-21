@@ -23,9 +23,11 @@ Client host - netlify.app
 - backend - NODE JS. It`s not my own project!
 - frontend - REACT JS application.
 
-<br/>
+# Features
+
 - [x] Note has can be creted.
 - [x] Note hash can be readed.
 - [x] Note is automatically deleted after reading.
+- [ ] Note contain files.
 
 <i>I used react bulma components in the project.</i>
