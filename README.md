@@ -9,10 +9,17 @@
 
 [nOote](https://nooteapp.netlify.app/) is an open source application that creates/reads note with unical hash.
 
-Try note app now! 
+Try note app now.
+Visit website -
 [nOote](https://nooteapp.netlify.app/)
 
-App has two project 
+# Hosting
+--
+Server host - HEROKU
+Client host - netlify.app
+--
+
+**App has two project **
 - backend - NODE JS. It`s not my own project!
 - frontend - REACT JS application.
 
