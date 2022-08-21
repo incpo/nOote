@@ -14,10 +14,10 @@ Visit website -
 [nOote](https://nooteapp.netlify.app/)
 
 # Hosting
---
+
 Server host - HEROKU
 Client host - netlify.app
---
+
 
 **App has two project **
 - backend - NODE JS. It`s not my own project!
