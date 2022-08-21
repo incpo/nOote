@@ -1,0 +1,134 @@
+.hide {
+    display: none;
+}
+
+.subtitle {
+    color: #006AFF;
+    font-weight: 600;
+}
+.btn-main {
+    margin: 0 auto;
+    padding: 0.6rem;
+    width: 50%;
+    background-color: #006AFF;
+    color: #fff;
+    max-width: 300px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 0.3s ease;
+}.btn-main:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0.349);
+    transform: scale(1.02);
+}
+
+.creator-field {
+    border: 1px solid black;
+    margin-bottom: 0.3rem;
+    padding: 0.8rem;
+    display: flex;
+    
+    justify-content: center;
+} 
+.result {
+    width: 50%;
+}
+
+.btn-container button {
+    width: 50%;
+    margin: 1rem auto;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.325rem;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+}.btn-container button:hover{
+    background-color: #006AFF;
+    transition: 0.3s ease;
+}
+
+.hashInput {
+    text-align: center;
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+} .hashInput input {
+    width: 80%;
+    margin-left: 1px;
+    max-width: 20rem;
+    outline: none;
+    padding: 0.2rem 1rem;
+    background-color: #006aff31;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    border-radius: 0.3rem;
+} .hashInput button {
+    padding: 0.2rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    border-radius: 0.3rem;
+    transition: 0.3s ease;
+} .hashInput button:hover {
+    transition: 0.3s ease;
+    color: #fff;
+    background-color: #006AFF;
+}
+
+
+
+.wrongHash {
+    animation: negativeResultAnimation 2s;
+}
+.findHash {
+    animation: positiveResultAnimation 2s;
+}
+  
+@keyframes negativeResultAnimation {
+    0% {
+      background-color: rgba(0, 0, 0, 0)
+    }
+    20% {
+      background-color:  rgba(250, 0, 0, 0.247);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0)
+    }
+}
+@keyframes positiveResultAnimation {
+    0% {
+      background-color: rgba(0, 0, 0, 0)
+    }
+    20% {
+      background-color:  rgba(100, 250, 0, 0.247);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0)
+    }
+}
+
+
+
+@media only screen and (max-width : 768px) {
+    .creator-field {
+        display: grid;
+        text-align: center;
+    }
+    .about-container {
+        text-align: center;
+    }
+}
+@media only screen and (max-width : 425px) {
+    .hashInput button {
+        margin-top: 0.5rem;
+    }
+}
+
