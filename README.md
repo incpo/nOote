@@ -7,8 +7,7 @@
 
 # nOote
 
-[nOote](https://nooteapp.netlify.app/) is an open source application that creates/reads note with unique hash.  <br/>
-Hash makes your note private, just send the special link to the recipient. <br/>
+[nOote](https://nooteapp.netlify.app/) is an open source application that creates/reads note with unique hash. Hash makes your note private, just send the special link to the recipient. <br/>
 The recipient does not see any information about the sender, he can read the message once, after refreshing the page he will not be able to do it again. <br/>
 
 Try note app now.
