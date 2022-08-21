@@ -13,8 +13,8 @@ Try note app now.
 Visit website -
 [nOote](https://nooteapp.netlify.app/)
 
-<b>App has two project</b>
-backend - NODE JS. It`s not my own project!
+<b>App has two projects</b> <br/>
+backend - NODE JS. It`s not my own project!<br/>
 frontend - REACT JS application.
 
 # Hosting
