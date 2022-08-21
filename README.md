@@ -15,11 +15,11 @@ Visit website -
 
 # Hosting
 
-Server host - HEROKU
+Server host - HEROKU <br/>
 Client host - netlify.app
 
 
-**App has two project **
+<b>App has two project</b>
 - backend - NODE JS. It`s not my own project!
 - frontend - REACT JS application.
 
