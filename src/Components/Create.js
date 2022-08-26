@@ -3,12 +3,15 @@ import { Heading } from "react-bulma-components";
 import { useState } from 'react';
 import { Layout } from "./MultiUsing/Layout";
 import { CreatorField } from "./MultiUsing/CreatorField";
+import Loading from './MultiUsing/Loading';
 
 export default function Create () {
     const [url,setUrl] = useState();
     const [result,setResult] = useState('hide');
+    const [aHideClass, setAhideClass] = useState('hide');
     const [hideClass,setHideClass] = useState('');
-   
+    const [requestLoad, setRequestLoad] = useState(false);
+
     const getData = (e) => {
         e.preventDefault();
         let note = e.target.elements.note.value.trim()
@@ -20,6 +23,7 @@ export default function Create () {
     }
 
     const sendData = (obj) =>{
+        setResult('')
         fetch(env.urlBackend, {
             method: 'POST',
             headers: {
@@ -30,12 +34,15 @@ export default function Create () {
         .then(response=> response.json())
         .then(response=> {
             if (response.result) {
-                setUrl(response.url)
-                setResult('')
-                setHideClass('hide')
+                setUrl(response.url);
+                setRequestLoad(true);
+                setHideClass('hide');
+                setAhideClass('');
             }
-        })
+        });
     }
+
+
 
     return(
         <Layout>
@@ -46,21 +53,28 @@ export default function Create () {
                     </div>
 
                     <div className='btn-container' style={{textAlign: 'center'}}>
-                    <button  className={hideClass} type='submit'>Create</button>
-                    <button  className={result} onClick={()=> window.location.reload()}>Create new one</button>
+                        <button className={hideClass} type='submit'>Create</button>
+                        <button className={aHideClass} type="reset" onClick={()=> window.location.reload()}>Create new one</button>
                     </div>
                 </form>
-                <div className={result} style={styles.resultLink}>
-                    <div style={styles.linkField}>
-                        <h3>Share this link with recipient:</h3>
-                        <a style={{wordWrap: 'break-word'}} href={env.url+'/'+url}>{env.url}/{url}</a>
+
+                <div className={result} style={styles.resultLink} >
+                    {(!requestLoad) ? (
+                        <Loading/>
+                    ) : 
+                    <div>
+                        <div style={styles.linkField}>
+                            <h3>Share this link with recipient:</h3>
+                            <a style={{wordWrap: 'break-word'}} href={env.url+'/'+url}>{env.url}/{url}</a>
+                        </div>
+                        <div style={styles.linkField}>
+                            <h3>Recipient also can find your note by hash: <br /><p style={{color:'#485fc7'}}>{url}</p></h3>
+                        </div>
                     </div>
-                    <div style={styles.linkField}>
-                        <h3>Recipient also can find your note by hash: <br /><p style={{color:'#485fc7'}}>{url}</p></h3>
-                    </div>
+                    }
                 </div>
 
-                <div style={styles.warning}>
+                <div id='anchor' style={styles.warning}>
                     <Heading textColor='black'>Warning!</Heading>
                     <Heading textWeight='normal' textColor='black' size='5' mt='2' subtitle>After reading the note, it will be automatically deleted!</Heading>
                 </div>
@@ -69,7 +83,6 @@ export default function Create () {
 
 
 }
-
 
 const styles = {
     resultLink: {
