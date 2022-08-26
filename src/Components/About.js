@@ -1,12 +1,12 @@
 import { Columns, Heading } from "react-bulma-components";
-
+import aboutImage from '../assets/icons/about.png'
 export default function About () {
 
 
     return(
         <Columns centered>
             <Columns.Column size='4'>
-                <div style={styles.imgContainer}><img src="/icons/about.png" alt="" /></div>
+                <div style={styles.imgContainer}><img src={aboutImage} alt="what is noote" /></div>
             </Columns.Column>
             <Columns.Column size='4'>
                 <div className="about-container">

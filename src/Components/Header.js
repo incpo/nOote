@@ -1,5 +1,6 @@
 import { Navbar } from 'react-bulma-components';
 import { useState } from 'react';
+import logo from '../assets/icons/logo.png'
 
 export default function Header () {
 
@@ -14,7 +15,7 @@ export default function Header () {
         <Navbar mb='6'>
             <Navbar.Brand>
                 <Navbar.Item href='/'>
-                <img src="/icons/logo.png" alt="noOte logo" style={{maxHeight: "40px"}}/>
+                <img src={logo} alt="noOte logo" style={{maxHeight: "40px"}}/>
                 </Navbar.Item>
                 <Navbar.Burger onClick={BurgerF}/>
             </Navbar.Brand>

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import { Heading } from "react-bulma-components";
 import { useParams } from "react-router-dom"
-import env from '../assets/env.json';
 import { Layout } from "./MultiUsing/Layout";
 import { CreatorField } from "./MultiUsing/CreatorField";
+import Loading from "../Components/MultiUsing/Loading";
+import errorImage from '../assets/icons/noteWillbeHere.png'
+import env from '../assets/env.json';
 
 export default function Note () {
     const [error, setError] = useState('hide');
@@ -12,6 +14,7 @@ export default function Note () {
     const [invsee, setInvsee] = useState('hide');
     const [dataText, setDataText] = useState('');
     const [HashAnimation, setHashAnimaton] = useState('');
+    const [loader,setLoader] = useState(false)
 
     let { url } = useParams()
     
@@ -28,6 +31,8 @@ export default function Note () {
 
     useEffect(()=> {
         if( url !== undefined ) {
+            setInvsee('')
+            setHashReader('hide');
             fetch(env.urlBackend, {
                 method: 'POST',
                 headers: {"Content-Type": "application/x-www-form-urlencoded",},
@@ -35,9 +40,7 @@ export default function Note () {
             })
             .then(response=> response.json())
             .then(response=> {
-                setHashReader('hide');
-                setInvsee('')
-                console.log(response)
+                setLoader(true)
                 if(response.result) {
                     setDataText(response.note);
                     setResult('');
@@ -68,15 +71,18 @@ export default function Note () {
                     <br />
                     <div className={invsee}>
                         <Heading mt='' mb='2' pb='0'>Note:</Heading>
+                        {!loader ?                         
+                        <Loading/> : 
                         <div style={styles.noteField}>
                             <div className={`${error} ${HashAnimation}`}>
                                 <p style={styles.warning}>There is no such hash.</p>
-                                <img src="/icons/noteWillbeHere.png" alt="" />
+                                <img src={errorImage} alt="" />
                             </div>
                             <div className={`${result} ${HashAnimation}`} >
                                 <textarea disabled style={styles.textArea} name="noteMessage" id="noteMessage" defaultValue={dataText} />
                             </div>
                         </div>
+                        }
                     </div>
                     <p style={styles.warning}>After reloading the page message will be deleted.</p>
                 </div>
