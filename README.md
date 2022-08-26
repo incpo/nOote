@@ -13,6 +13,10 @@ The recipient does not see any information about the sender, he can read the mes
 Try note app now.
 Visit website -
 [nOote](https://nooteapp.netlify.app/) <br/>
+<<<<<<< HEAD
+=======
+The BACKEND may lag, so if some button didn't work the first time, just wait.
+>>>>>>> 3d97229c9111882ff07f64a8d8a69823a1dce181
 
 <b>App has two projects:</b> <br/>
 _backend - NODE JS. It`s not my own project!<br/>
