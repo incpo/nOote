@@ -24,6 +24,7 @@ export default function Create () {
 
     const sendData = (obj) =>{
         setResult('')
+        setHideClass('hide');
         fetch(env.urlBackend, {
             method: 'POST',
             headers: {
@@ -36,7 +37,6 @@ export default function Create () {
             if (response.result) {
                 setUrl(response.url);
                 setRequestLoad(true);
-                setHideClass('hide');
                 setAhideClass('');
             }
         });
