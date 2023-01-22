@@ -19,7 +19,7 @@ Caution! If the application doesn't work (backend), then watch the preview versi
 <b>App has two projects:</b> <br/>
 _backend - NODE JS. It`s not my own project!<br/>
 _frontend - REACT JS application. <br/>
-Im also used react bulma components in this app.
+I used react bulma components in this app.
 
 # Hosting
 Server host - HEROKU <br/>
