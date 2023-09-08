@@ -13,7 +13,7 @@ The recipient does not see any information about the sender, he can read the mes
 Try note app now.
 Visit website -
 [nOote](https://nooteapp.netlify.app/) <br/>
-Caution! If the application doesn't work (backend), then watch the preview version on [youtube](https://youtu.be/Asb3yyhNfPY).<br/>
+**WARNING!** Application doesn't supported now (backend)!, Watch the preview version on [youtube](https://youtu.be/Asb3yyhNfPY).<br/>
 
 
 <b>App has two projects:</b> <br/>
